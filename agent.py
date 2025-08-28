@@ -5,15 +5,18 @@ import random, json, logging, argparse, time as a_time, os, sys
 import pytz, joblib
 from sklearn.preprocessing import StandardScaler
 from tqdm import tqdm
+import pandas as pd # <-- FIX: Added this import
 
 import config, database, utils
 from model import TransformerDQN
 from environment import TradingEnv
 
+# --- LOGGING SETUP ---
 os.makedirs(config.LOG_DIR, exist_ok=True)
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[logging.FileHandler(config.AGENT_LOG_FILE), logging.StreamHandler()])
 
+# --- REPLAY BUFFER & TRAINING ---
 class ReplayBuffer:
     def __init__(self, capacity): self.buffer = deque(maxlen=capacity)
     def push(self, state, action, reward, next_state, done): self.buffer.append((state, action, reward, next_state, done))
@@ -22,7 +25,7 @@ class ReplayBuffer:
 
 def train_agent(train_df):
     logging.info(f"Using device: {config.DEVICE}")
-    env = TradingEnv(pd.DataFrame(), StandardScaler())
+    env = TradingEnv(pd.DataFrame(), StandardScaler()) # Temp env to get features
     features = env.features
     scaler = StandardScaler().fit(train_df[features])
     joblib.dump(scaler, config.SCALER_FILE)
@@ -97,34 +100,81 @@ def run_backtest_process(test_df):
     logging.info("Backtest complete. Results saved to the database.")
     utils.push_results_to_github(f"Automated backtest results - {datetime.now().strftime('%Y-%m-%d %H:%M')}")
 
+def run_paper_trader():
+    logging.info("--- Initializing Agent for LIVE PAPER TRADING ---")
+    try:
+        scaler = joblib.load(config.SCALER_FILE)
+        # This is a bit of a hack to get feature names without a full df
+        dummy_df = pd.DataFrame(columns=['open', 'high', 'low', 'close', 'volume', 'atr', 'rsi', 'price_vs_ema'])
+        temp_env = TradingEnv(dummy_df, scaler)
+        n_features, n_actions = len(temp_env.features), 3
+        model = TransformerDQN(n_features, n_actions).to(config.DEVICE)
+        model.load_state_dict(torch.load(config.MODEL_FILE)); model.eval()
+        logging.info("Agent model and scaler loaded successfully.")
+    except Exception as e: logging.error(f"Could not load files: {e}"); return
+    
+    paper_balance, position, entry_price, entry_time, stop_loss, take_profit = config.INITIAL_ACCOUNT_BALANCE, 0, 0, None, 0, 0
+    exchange = ccxt.bybit({'options': {'defaultType': 'swap'}})
+
+    while True:
+        now = datetime.now(pytz.utc); wait_seconds = (15 - (now.minute % 15)) * 60 - now.second
+        logging.info(f"Waiting for {wait_seconds:.0f} seconds until next 15m candle...")
+        a_time.sleep(wait_seconds)
+        
+        logging.info("New 15m candle. Syncing data and analyzing market...")
+        database.fetch_and_store_data(config.SYMBOL, config.SIGNAL_TIMEFRAME)
+        df_15m = database.get_data_from_db(config.SYMBOL, config.SIGNAL_TIMEFRAME)
+        df_15m_featured = database.create_features(df_15m.copy())
+        
+        if position != 0:
+            try:
+                ticker = exchange.fetch_ticker(config.SYMBOL)
+                current_price = ticker['last']
+                exit_reason = None
+                if position == 1 and current_price <= stop_loss: exit_reason = "Stop-Loss"
+                elif position == 1 and current_price >= take_profit: exit_reason = "Take-Profit"
+                # ... add short logic
+                if exit_reason:
+                    # ... log trade logic
+                    position = 0
+            except Exception as e: logging.error(f"Could not check SL/TP: {e}")
+
+        if position == 0:
+            latest_data = df_15m_featured.iloc[-config.SEQUENCE_LENGTH:]
+            scaled_features = scaler.transform(latest_data[temp_env.features])
+            state = torch.tensor([scaled_features], dtype=torch.float32).to(config.DEVICE)
+            with torch.no_grad():
+                action = model(state).max(1)[1].item()
+                decision = {0: 'Hold', 1: 'Long', 2: 'Short'}[action]
+            logging.info(f"Agent Decision: {decision}")
+            if decision != 'Hold':
+                # ... open paper trade logic
+                pass
+        a_time.sleep(10)
+
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="Apex Predator RL Trading Agent")
-    parser.add_argument('--train', action='store_true', help='Train a new agent model.')
-    parser.add_argument('--run', action='store_true', help='Run a backtest on the trained agent.')
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--train', action='store_true'); parser.add_argument('--run', action='store_true'); parser.add_argument('--papertrade', action='store_true')
     args = parser.parse_args()
 
-    success_fetch = database.fetch_and_store_data(config.SYMBOL, config.SIGNAL_TIMEFRAME)
-    if not success_fetch:
-        logging.error("Failed to fetch data. Aborting.")
-        sys.exit(1)
-
-    df_15m = database.get_data_from_db(config.SYMBOL, config.SIGNAL_TIMEFRAME)
-    
-    if df_15m.empty:
-        logging.error("Data is empty after fetch. Cannot proceed.")
-        sys.exit(1)
-    
-    df_15m_featured = database.create_features(df_15m.copy())
-    split_index = int(len(df_15m_featured) * 0.75)
-    train_df, test_df = df_15m_featured.iloc[:split_index], df_15m_featured.iloc[split_index:]
-    logging.info(f"Data split: {len(train_df)} training samples, {len(test_df)} testing samples.")
-
     if args.train:
-        train_agent(train_df)
-    elif args.run:
-        if not os.path.exists(config.MODEL_FILE):
-            logging.error("Model file not found. Please train first.")
+        df_15m = database.get_data_from_db(config.SYMBOL, config.SIGNAL_TIMEFRAME)
+        if df_15m.empty: logging.error("Data is empty.")
         else:
+            df_featured = database.create_features(df_15m.copy())
+            split_index = int(len(df_featured) * 0.75)
+            train_df = df_featured.iloc[:split_index]
+            train_agent(train_df)
+    elif args.run:
+        if not os.path.exists(config.MODEL_FILE): logging.error("Model file not found. Please train first.")
+        else:
+            df_15m = database.get_data_from_db(config.SYMBOL, config.SIGNAL_TIMEFRAME)
+            df_featured = database.create_features(df_15m.copy())
+            split_index = int(len(df_featured) * 0.75)
+            test_df = df_featured.iloc[split_index:]
             run_backtest_process(test_df)
+    elif args.papertrade:
+        if not os.path.exists(config.MODEL_FILE): logging.error("Model file not found. Please train first.")
+        else: run_paper_trader()
     else:
-        print("Please specify mode: --train or --run.")
+        print("Please specify mode: --train, --run, or --papertrade.")

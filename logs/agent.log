@@ -311,3 +311,5 @@
 2025-08-28 15:53:50,958 - INFO - Ep 37/200 | Reward: 1518.34 | Avg Reward (10ep): 862.25 | Epsilon: 0.83
 2025-08-28 15:54:39,653 - INFO - Using device: cpu
 2025-08-28 15:57:27,139 - ERROR - Data is empty.
+2025-08-28 16:05:58,628 - INFO - Data split: 2175 training samples, 726 testing samples.
+2025-08-28 16:05:58,629 - INFO - Using device: cpu
