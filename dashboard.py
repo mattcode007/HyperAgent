@@ -1,19 +1,9 @@
 # dashboard.py
-import streamlit as st
-import pandas as pd
-import plotly.graph_objects as go
-import json
-import os
-import time
-import numpy as np
-import sys
+import streamlit as st, pandas as pd, plotly.graph_objects as go, json, os, config, database, time, numpy as np, sys
+from datetime import datetime # <-- FIX: Added this import
 
-# FIX: Add the project directory to the Python path to ensure local modules are found
+# Add the project directory to the Python path to ensure local modules are found
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-
-# FIX: Import local modules after setting the path
-import config 
-import database
 
 def display_dashboard():
     st.set_page_config(layout="wide", page_title="Apex Agent Dashboard")
@@ -75,8 +65,6 @@ def display_dashboard():
         else:
             st.warning("No training history found. Train an agent first.")
 
-    # Auto-refresh functionality can be resource-intensive on public apps.
-    # A manual refresh button is often more stable.
     st.sidebar.button("Refresh Data")
     
 if __name__ == '__main__':
