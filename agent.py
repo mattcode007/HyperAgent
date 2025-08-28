@@ -5,18 +5,16 @@ import random, json, logging, argparse, time as a_time, os, sys
 import pytz, joblib
 from sklearn.preprocessing import StandardScaler
 from tqdm import tqdm
-import pandas as pd # <-- FIX: Added this import
+import pandas as pd
 
 import config, database, utils
 from model import TransformerDQN
 from environment import TradingEnv
 
-# --- LOGGING SETUP ---
 os.makedirs(config.LOG_DIR, exist_ok=True)
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[logging.FileHandler(config.AGENT_LOG_FILE), logging.StreamHandler()])
 
-# --- REPLAY BUFFER & TRAINING ---
 class ReplayBuffer:
     def __init__(self, capacity): self.buffer = deque(maxlen=capacity)
     def push(self, state, action, reward, next_state, done): self.buffer.append((state, action, reward, next_state, done))
@@ -25,8 +23,9 @@ class ReplayBuffer:
 
 def train_agent(train_df):
     logging.info(f"Using device: {config.DEVICE}")
-    env = TradingEnv(pd.DataFrame(), StandardScaler()) # Temp env to get features
-    features = env.features
+    
+    # FIX: Fit the scaler on the real data BEFORE creating any environment
+    features = ['open', 'high', 'low', 'close', 'volume', 'atr', 'rsi', 'price_vs_ema', 'volatility', 'rsi_lag_3']
     scaler = StandardScaler().fit(train_df[features])
     joblib.dump(scaler, config.SCALER_FILE)
     logging.info(f"Scaler for {len(features)} features fitted and saved.")
@@ -78,8 +77,11 @@ def run_backtest_process(test_df):
     logging.info("Initializing Agent for Backtest...")
     try:
         scaler = joblib.load(config.SCALER_FILE)
-        temp_env = TradingEnv(test_df.head(config.SEQUENCE_LENGTH+1), scaler)
+        # FIX: Use the loaded, fitted scaler to get feature info correctly
+        dummy_df = pd.DataFrame(columns=scaler.get_feature_names_out())
+        temp_env = TradingEnv(dummy_df, scaler)
         n_features, n_actions = len(temp_env.features), 3
+
         model = TransformerDQN(n_features, n_actions).to(config.DEVICE)
         model.load_state_dict(torch.load(config.MODEL_FILE)); model.eval()
         logging.info("Agent model and scaler loaded successfully.")
@@ -104,8 +106,7 @@ def run_paper_trader():
     logging.info("--- Initializing Agent for LIVE PAPER TRADING ---")
     try:
         scaler = joblib.load(config.SCALER_FILE)
-        # This is a bit of a hack to get feature names without a full df
-        dummy_df = pd.DataFrame(columns=['open', 'high', 'low', 'close', 'volume', 'atr', 'rsi', 'price_vs_ema'])
+        dummy_df = pd.DataFrame(columns=scaler.get_feature_names_out())
         temp_env = TradingEnv(dummy_df, scaler)
         n_features, n_actions = len(temp_env.features), 3
         model = TransformerDQN(n_features, n_actions).to(config.DEVICE)
