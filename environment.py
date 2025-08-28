@@ -11,8 +11,9 @@ class TradingEnv(gym.Env):
         self.features = ['open', 'high', 'low', 'close', 'volume', 'atr', 'rsi', 'price_vs_ema', 'volatility', 'rsi_lag_3']
         self.scaler = scaler
         self.df_scaled_features = self.scaler.transform(self.df[self.features])
-        self.action_space = spaces.Discrete(3)
-        self.observation_space = spaces.Box(low=-np.inf, high=np.inf, shape=(config.SEQUENCE_LENGTH, len(self.features)), dtype=np.float32)
+        self.action_space = spaces.Discrete(3) # 0: Flat/Exit, 1: Long, 2: Short
+        self.observation_space = spaces.Box(low=-np.inf, high=np.inf, 
+                                            shape=(config.SEQUENCE_LENGTH, len(self.features)), dtype=np.float32)
 
     def reset(self, seed=None, options=None):
         self.current_step = config.SEQUENCE_LENGTH
