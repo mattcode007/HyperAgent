@@ -305,3 +305,9 @@
 2025-08-28 15:22:18,103 - INFO - Ep 31/200 | Reward: 597.82 | Avg Reward (10ep): 1021.70 | Epsilon: 0.86
 2025-08-28 15:29:37,295 - INFO - Ep 32/200 | Reward: 2581.10 | Avg Reward (10ep): 1225.10 | Epsilon: 0.85
 2025-08-28 15:33:01,861 - INFO - Ep 33/200 | Reward: 844.86 | Avg Reward (10ep): 1299.68 | Epsilon: 0.85
+2025-08-28 15:37:19,426 - INFO - Ep 34/200 | Reward: 41.94 | Avg Reward (10ep): 1144.06 | Epsilon: 0.84
+2025-08-28 15:39:32,865 - INFO - Ep 35/200 | Reward: -65.58 | Avg Reward (10ep): 1004.79 | Epsilon: 0.84
+2025-08-28 15:46:40,137 - INFO - Ep 36/200 | Reward: 1126.49 | Avg Reward (10ep): 897.88 | Epsilon: 0.83
+2025-08-28 15:53:50,958 - INFO - Ep 37/200 | Reward: 1518.34 | Avg Reward (10ep): 862.25 | Epsilon: 0.83
+2025-08-28 15:54:39,653 - INFO - Using device: cpu
+2025-08-28 15:57:27,139 - ERROR - Data is empty.

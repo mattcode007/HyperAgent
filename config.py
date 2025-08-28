@@ -14,10 +14,6 @@ AGENT_LOG_FILE = os.path.join(LOG_DIR, "agent.log")
 # --- EXECUTION & HARDWARE ---
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-# --- GITHUB CONFIG (Fill these in for automated pushes) ---
-GITHUB_USERNAME = "mattcode007" 
-REPO_NAME = "HyperAgent"
-
 # --- EXCHANGE & DATA ---
 EXCHANGE_ID = 'bybit'
 SYMBOL = 'BTC/USDT'
@@ -31,6 +27,9 @@ INITIAL_ACCOUNT_BALANCE = 10000.0
 LEVERAGE = 10.0
 ATR_PERIOD = 14
 RISK_REWARD_RATIO = 2.0
+RSI_LAG = 3
+# FIX: Added missing VOLATILITY_WINDOW parameter
+VOLATILITY_WINDOW = 96 # 1 day's worth of 15m candles
 
 # --- DQN AGENT PARAMETERS ---
 GAMMA = 0.99

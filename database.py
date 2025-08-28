@@ -1,5 +1,5 @@
 # database.py
-import ccxt, pandas as pd, sqlite3, pytz
+import ccxt, pandas as pd, sqlite3, pytz, logging
 from datetime import datetime, timedelta, time
 import config
 
@@ -30,7 +30,7 @@ def fetch_and_store_data(symbol, timeframe):
     if since: since += 1 
 
     all_ohlcv = []
-    print(f"Syncing {timeframe} data for {symbol}...")
+    logging.info(f"Syncing {timeframe} data for {symbol}...")
     while True:
         try:
             params = {'type': 'linear'}
@@ -39,7 +39,9 @@ def fetch_and_store_data(symbol, timeframe):
             all_ohlcv.extend(ohlcv)
             since = ohlcv[-1][0] + 1
             if len(ohlcv) < 1000: break
-        except Exception as e: print(f"Error fetching data: {e}"); break
+        except Exception as e:
+            logging.error(f"Error fetching data from exchange: {e}")
+            return False # Return failure signal
     
     if all_ohlcv:
         new_df = pd.DataFrame(all_ohlcv, columns=['timestamp', 'open', 'high', 'low', 'close', 'volume'])
@@ -49,10 +51,12 @@ def fetch_and_store_data(symbol, timeframe):
         new_df = new_df[~new_df['timestamp'].isin(existing_ts['timestamp'])]
         if not new_df.empty:
             new_df.to_sql(table_name, conn, if_exists='append', index=False)
-            print(f"Stored {len(new_df)} new {timeframe} candles.")
+            logging.info(f"Stored {len(new_df)} new {timeframe} candles.")
     conn.close()
+    return True # Return success signal
 
 def get_data_from_db(symbol, timeframe):
+    # ... (This function remains the same)
     conn = setup_database()
     df = pd.read_sql(f"SELECT * FROM ohlcv WHERE symbol='{symbol}' AND timeframe='{timeframe}' ORDER BY timestamp", conn, 
                       index_col='timestamp', parse_dates=['timestamp'])
@@ -61,16 +65,18 @@ def get_data_from_db(symbol, timeframe):
     return df.drop(columns=['symbol', 'timeframe'], errors='ignore')
 
 def create_features(df):
+    # ... (This function remains the same)
     df['atr'] = (df['high'] - df['low']).rolling(window=config.ATR_PERIOD).mean()
     df['rsi'] = 100 - (100 / (1 + (df['close'].diff().clip(lower=0).rolling(14).mean() / df['close'].diff().clip(upper=0).abs().rolling(14).mean())))
     df['ema_200'] = df['close'].ewm(span=200, adjust=False).mean()
     df['price_vs_ema'] = (df['close'] - df['ema_200']) / df['ema_200']
-    df['volatility'] = df['close'].pct_change().rolling(window=96).std()
-    df['rsi_lag_3'] = df['rsi'].shift(3)
+    df['volatility'] = df['close'].pct_change().rolling(window=config.VOLATILITY_WINDOW).std()
+    df['rsi_lag_3'] = df['rsi'].shift(config.RSI_LAG)
     df.dropna(inplace=True)
     return df
 
 def log_trade_to_db(trade_info):
+    # ... (This function remains the same)
     conn = setup_database()
     cursor = conn.cursor()
     cursor.execute("""
