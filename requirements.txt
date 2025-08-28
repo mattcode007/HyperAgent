@@ -5,3 +5,7 @@ numpy
 torch
 scikit-learn
 joblib
+ccxt
+pytz
+tqdm
+gymnasium
