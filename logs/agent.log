@@ -1,0 +1,307 @@
+2025-08-28 10:50:44,500 - INFO - Fitting data scaler and creating environment...
+2025-08-28 10:50:44,501 - INFO - Scaler fitted and saved to /Users/matteocesari/Desktop/Apex Agent/scaler.joblib
+2025-08-28 10:50:45,113 - INFO - Starting training for 30 episodes...
+2025-08-28 10:51:06,796 - INFO - Episode 1/30 | Reward: -5.63 | Epsilon: 1.00
+2025-08-28 10:51:38,867 - INFO - Episode 2/30 | Reward: -5.85 | Epsilon: 1.00
+2025-08-28 10:52:07,858 - INFO - Episode 3/30 | Reward: -6.46 | Epsilon: 1.00
+2025-08-28 10:52:33,012 - INFO - Episode 4/30 | Reward: -5.87 | Epsilon: 1.00
+2025-08-28 10:53:51,522 - INFO - Fitting data scaler and creating environment...
+2025-08-28 10:53:51,524 - INFO - Scaler fitted and saved to /Users/matteocesari/Desktop/Apex Agent/scaler.joblib
+2025-08-28 10:53:52,169 - INFO - Starting training for 30 episodes...
+2025-08-28 10:54:15,852 - INFO - Episode 1/30 | Reward: -6.86 | Epsilon: 1.00
+2025-08-28 10:54:42,781 - INFO - Episode 2/30 | Reward: -7.49 | Epsilon: 1.00
+2025-08-28 10:55:04,292 - INFO - Episode 3/30 | Reward: -5.37 | Epsilon: 1.00
+2025-08-28 10:55:30,625 - INFO - Episode 4/30 | Reward: -6.37 | Epsilon: 1.00
+2025-08-28 10:56:03,868 - INFO - Episode 5/30 | Reward: -8.23 | Epsilon: 1.00
+2025-08-28 10:56:28,639 - INFO - Episode 6/30 | Reward: -5.99 | Epsilon: 0.99
+2025-08-28 10:57:03,916 - INFO - Episode 7/30 | Reward: -7.05 | Epsilon: 0.99
+2025-08-28 10:57:28,271 - INFO - Episode 8/30 | Reward: -6.14 | Epsilon: 0.99
+2025-08-28 10:57:55,857 - INFO - Episode 9/30 | Reward: -6.79 | Epsilon: 0.99
+2025-08-28 10:58:26,354 - INFO - Episode 10/30 | Reward: -6.99 | Epsilon: 0.99
+2025-08-28 10:59:02,271 - INFO - Episode 11/30 | Reward: -7.49 | Epsilon: 0.99
+2025-08-28 10:59:40,575 - INFO - Episode 12/30 | Reward: -6.41 | Epsilon: 0.99
+2025-08-28 11:00:16,835 - INFO - Episode 13/30 | Reward: -6.63 | Epsilon: 0.99
+2025-08-28 11:00:38,037 - INFO - Episode 14/30 | Reward: -5.37 | Epsilon: 0.99
+2025-08-28 11:01:05,668 - INFO - Episode 15/30 | Reward: -6.18 | Epsilon: 0.99
+2025-08-28 11:01:49,825 - INFO - Episode 16/30 | Reward: -7.66 | Epsilon: 0.98
+2025-08-28 11:02:26,976 - INFO - Episode 17/30 | Reward: -6.28 | Epsilon: 0.98
+2025-08-28 11:02:53,212 - INFO - Episode 18/30 | Reward: -5.63 | Epsilon: 0.98
+2025-08-28 11:06:04,639 - INFO - Data split: 711 training samples, 237 testing samples.
+2025-08-28 11:06:04,640 - INFO - Fitting data scaler on training data and creating environment...
+2025-08-28 11:06:04,642 - INFO - Scaler fitted and saved to /Users/matteocesari/Desktop/Apex Agent/scaler.joblib
+2025-08-28 11:06:05,286 - INFO - Starting training for 30 episodes...
+2025-08-28 11:06:06,568 - INFO - Episode 1/30 | Reward: -2022.38 | Epsilon: 1.00
+2025-08-28 11:06:29,637 - INFO - Episode 2/30 | Reward: 2008.64 | Epsilon: 1.00
+2025-08-28 11:06:43,239 - INFO - Episode 3/30 | Reward: -1423.80 | Epsilon: 1.00
+2025-08-28 11:07:06,205 - INFO - Episode 4/30 | Reward: 1813.98 | Epsilon: 1.00
+2025-08-28 11:07:08,933 - INFO - Episode 5/30 | Reward: -1062.01 | Epsilon: 1.00
+2025-08-28 11:07:31,386 - INFO - Episode 6/30 | Reward: 7176.75 | Epsilon: 0.99
+2025-08-28 11:07:40,135 - INFO - Episode 7/30 | Reward: -1229.06 | Epsilon: 0.99
+2025-08-28 11:08:03,370 - INFO - Episode 8/30 | Reward: 2699.81 | Epsilon: 0.99
+2025-08-28 11:08:07,678 - INFO - Episode 9/30 | Reward: -1015.06 | Epsilon: 0.99
+2025-08-28 11:08:30,410 - INFO - Episode 10/30 | Reward: 3201.16 | Epsilon: 0.99
+2025-08-28 11:08:33,629 - INFO - Episode 11/30 | Reward: -1395.23 | Epsilon: 0.99
+2025-08-28 11:08:46,511 - INFO - Episode 12/30 | Reward: -1159.81 | Epsilon: 0.99
+2025-08-28 11:09:04,621 - INFO - Episode 13/30 | Reward: -1837.16 | Epsilon: 0.99
+2025-08-28 11:09:07,093 - INFO - Episode 14/30 | Reward: -1314.98 | Epsilon: 0.99
+2025-08-28 11:09:10,148 - INFO - Episode 15/30 | Reward: -1017.60 | Epsilon: 0.99
+2025-08-28 11:09:32,967 - INFO - Episode 16/30 | Reward: 1676.69 | Epsilon: 0.98
+2025-08-28 11:09:55,419 - INFO - Episode 17/30 | Reward: 927.50 | Epsilon: 0.98
+2025-08-28 11:10:13,487 - INFO - Episode 18/30 | Reward: -1200.50 | Epsilon: 0.98
+2025-08-28 11:10:36,285 - INFO - Episode 19/30 | Reward: 2083.13 | Epsilon: 0.98
+2025-08-28 11:10:44,398 - INFO - Episode 20/30 | Reward: -1227.57 | Epsilon: 0.98
+2025-08-28 11:10:46,840 - INFO - Episode 21/30 | Reward: -1007.33 | Epsilon: 0.98
+2025-08-28 11:11:09,778 - INFO - Episode 22/30 | Reward: 1002.38 | Epsilon: 0.98
+2025-08-28 11:11:24,006 - INFO - Episode 23/30 | Reward: -1013.06 | Epsilon: 0.98
+2025-08-28 11:11:47,007 - INFO - Episode 24/30 | Reward: 2133.05 | Epsilon: 0.98
+2025-08-28 11:11:49,406 - INFO - Episode 25/30 | Reward: -1319.78 | Epsilon: 0.98
+2025-08-28 11:11:52,519 - INFO - Episode 26/30 | Reward: -1051.36 | Epsilon: 0.97
+2025-08-28 11:12:15,849 - INFO - Episode 27/30 | Reward: 983.08 | Epsilon: 0.97
+2025-08-28 11:12:33,607 - INFO - Episode 28/30 | Reward: -1051.53 | Epsilon: 0.97
+2025-08-28 11:12:42,604 - INFO - Episode 29/30 | Reward: -1091.82 | Epsilon: 0.97
+2025-08-28 11:12:54,187 - INFO - Episode 30/30 | Reward: -1046.03 | Epsilon: 0.97
+2025-08-28 11:12:54,191 - INFO - Training complete! Model saved to /Users/matteocesari/Desktop/Apex Agent/agent_model.pth
+2025-08-28 11:13:05,249 - INFO - Data split: 1460 training samples, 487 testing samples.
+2025-08-28 11:13:05,249 - INFO - Initializing Agent for Backtest on Unseen Data...
+2025-08-28 11:13:05,256 - INFO - Agent model and scaler loaded successfully.
+2025-08-28 11:13:05,258 - INFO - Starting backtest...
+2025-08-28 11:16:16,459 - INFO - Data split: 2209 training samples, 737 testing samples.
+2025-08-28 11:16:16,460 - INFO - Initializing Agent for Backtest on Unseen Data...
+2025-08-28 11:16:16,485 - INFO - Agent model and scaler loaded successfully.
+2025-08-28 11:18:24,657 - INFO - Data split: 2958 training samples, 987 testing samples.
+2025-08-28 11:18:24,657 - INFO - Fitting data scaler on training data and creating environment...
+2025-08-28 11:18:24,659 - INFO - Scaler fitted and saved to /Users/matteocesari/Desktop/Apex Agent/scaler.joblib
+2025-08-28 11:18:25,307 - INFO - Starting training for 30 episodes...
+2025-08-28 11:18:42,967 - INFO - Episode 1/30 | Reward: -1317.90 | Epsilon: 1.00
+2025-08-28 11:18:45,426 - INFO - Episode 2/30 | Reward: -1012.07 | Epsilon: 1.00
+2025-08-28 11:20:46,792 - INFO - Episode 3/30 | Reward: 6432.60 | Epsilon: 1.00
+2025-08-28 11:21:47,060 - INFO - Episode 4/30 | Reward: -1162.21 | Epsilon: 1.00
+2025-08-28 11:21:50,015 - INFO - Episode 5/30 | Reward: -1078.01 | Epsilon: 1.00
+2025-08-28 11:21:52,451 - INFO - Episode 6/30 | Reward: -1114.47 | Epsilon: 0.99
+2025-08-28 11:22:05,039 - INFO - Episode 7/30 | Reward: -1022.30 | Epsilon: 0.99
+2025-08-28 11:22:06,155 - INFO - Episode 8/30 | Reward: -1262.56 | Epsilon: 0.99
+2025-08-28 11:22:09,038 - INFO - Episode 9/30 | Reward: -1133.41 | Epsilon: 0.99
+2025-08-28 11:22:18,423 - INFO - Episode 10/30 | Reward: -1149.62 | Epsilon: 0.99
+2025-08-28 11:22:27,868 - INFO - Episode 11/30 | Reward: -1003.19 | Epsilon: 0.99
+2025-08-28 11:22:40,519 - INFO - Episode 12/30 | Reward: -1484.22 | Epsilon: 0.99
+2025-08-28 11:22:42,958 - INFO - Episode 13/30 | Reward: -1517.38 | Epsilon: 0.99
+2025-08-28 11:22:45,265 - INFO - Episode 14/30 | Reward: -1109.24 | Epsilon: 0.99
+2025-08-28 11:22:48,195 - INFO - Episode 15/30 | Reward: -1101.67 | Epsilon: 0.99
+2025-08-28 11:22:51,020 - INFO - Episode 16/30 | Reward: -1161.68 | Epsilon: 0.98
+2025-08-28 11:22:54,249 - INFO - Episode 17/30 | Reward: -1099.00 | Epsilon: 0.98
+2025-08-28 11:22:56,881 - INFO - Episode 18/30 | Reward: -2022.73 | Epsilon: 0.98
+2025-08-28 11:22:59,613 - INFO - Episode 19/30 | Reward: -1386.84 | Epsilon: 0.98
+2025-08-28 11:23:13,386 - INFO - Episode 20/30 | Reward: -1081.51 | Epsilon: 0.98
+2025-08-28 11:23:26,074 - INFO - Episode 21/30 | Reward: -1004.27 | Epsilon: 0.98
+2025-08-28 11:23:41,269 - INFO - Episode 22/30 | Reward: -1391.88 | Epsilon: 0.98
+2025-08-28 11:24:51,091 - INFO - Episode 23/30 | Reward: -1082.69 | Epsilon: 0.98
+2025-08-28 11:26:47,617 - INFO - Episode 24/30 | Reward: 8663.33 | Epsilon: 0.98
+2025-08-28 11:26:55,529 - INFO - Episode 25/30 | Reward: -1382.36 | Epsilon: 0.98
+2025-08-28 11:28:46,180 - INFO - Episode 26/30 | Reward: 13162.85 | Epsilon: 0.97
+2025-08-28 11:29:55,172 - INFO - Episode 27/30 | Reward: -1057.39 | Epsilon: 0.97
+2025-08-28 11:30:23,927 - INFO - Episode 28/30 | Reward: -1031.55 | Epsilon: 0.97
+2025-08-28 11:32:15,227 - INFO - Episode 29/30 | Reward: 251.61 | Epsilon: 0.97
+2025-08-28 11:32:17,933 - INFO - Episode 30/30 | Reward: -1039.59 | Epsilon: 0.97
+2025-08-28 11:32:17,989 - INFO - Training complete! Model saved to /Users/matteocesari/Desktop/Apex Agent/agent_model.pth
+2025-08-28 11:32:27,001 - INFO - Data split: 3708 training samples, 1236 testing samples.
+2025-08-28 11:32:27,001 - INFO - Initializing Agent for Backtest on Unseen Data...
+2025-08-28 11:32:27,014 - INFO - Agent model and scaler loaded successfully.
+2025-08-28 11:32:27,017 - INFO - Starting backtest...
+2025-08-28 11:32:27,035 - INFO - BACKTEST TRADE LOGGED: PnL=$5517.40, New Balance=$15517.40
+2025-08-28 11:32:27,229 - INFO - BACKTEST TRADE LOGGED: PnL=$14724.20, New Balance=$30241.60
+2025-08-28 11:32:27,232 - INFO - BACKTEST TRADE LOGGED: PnL=$-1839.40, New Balance=$28402.20
+2025-08-28 11:32:27,248 - INFO - BACKTEST TRADE LOGGED: PnL=$-5298.10, New Balance=$23104.10
+2025-08-28 11:32:27,362 - INFO - BACKTEST TRADE LOGGED: PnL=$-20538.30, New Balance=$2565.80
+2025-08-28 11:32:27,371 - INFO - BACKTEST TRADE LOGGED: PnL=$-1645.20, New Balance=$920.60
+2025-08-28 11:32:27,386 - INFO - BACKTEST TRADE LOGGED: PnL=$-3044.80, New Balance=$-2124.20
+2025-08-28 11:32:27,386 - INFO - Backtest complete. Results have been saved to the database.
+2025-08-28 11:34:15,778 - INFO - Data split: 4457 training samples, 1486 testing samples.
+2025-08-28 11:34:15,779 - INFO - Fitting data scaler on training data and creating environment...
+2025-08-28 11:34:15,780 - INFO - Scaler fitted and saved to /Users/matteocesari/Desktop/Apex Agent/scaler.joblib
+2025-08-28 11:34:16,417 - INFO - Starting training for 30 episodes...
+2025-08-28 11:34:17,754 - INFO - Episode 1/30 | Reward: 0.00 | Epsilon: 1.00
+2025-08-28 11:34:42,362 - INFO - Episode 2/30 | Reward: 0.00 | Epsilon: 1.00
+2025-08-28 11:35:20,729 - INFO - Episode 3/30 | Reward: 0.00 | Epsilon: 1.00
+2025-08-28 11:39:24,636 - INFO - Data split: 712 training samples, 238 testing samples.
+2025-08-28 11:39:24,637 - INFO - Fitting data scaler on training data and creating environment...
+2025-08-28 11:39:24,638 - INFO - Scaler fitted and saved to /Users/matteocesari/Desktop/Apex Agent/scaler.joblib
+2025-08-28 11:39:25,338 - INFO - Starting training for 30 episodes...
+2025-08-28 11:39:38,018 - INFO - Episode 1/30 | Reward: 0.00 | Epsilon: 1.00
+2025-08-28 11:40:03,501 - INFO - Episode 2/30 | Reward: 0.00 | Epsilon: 1.00
+2025-08-28 11:40:33,293 - INFO - Data split: 712 training samples, 238 testing samples.
+2025-08-28 11:40:33,293 - INFO - Fitting data scaler on training data and creating environment...
+2025-08-28 11:40:33,295 - INFO - Scaler fitted and saved to /Users/matteocesari/Desktop/Apex Agent/scaler.joblib
+2025-08-28 11:40:33,948 - INFO - Starting training for 30 episodes...
+2025-08-28 11:40:35,135 - INFO - Episode 1/30 | Reward: 0.00 | Epsilon: 1.00
+2025-08-28 11:40:48,622 - INFO - Episode 2/30 | Reward: 0.00 | Epsilon: 1.00
+2025-08-28 11:40:52,108 - INFO - Episode 3/30 | Reward: 0.00 | Epsilon: 1.00
+2025-08-28 11:41:22,700 - INFO - Episode 4/30 | Reward: 0.00 | Epsilon: 1.00
+2025-08-28 11:41:59,156 - INFO - Episode 5/30 | Reward: 0.00 | Epsilon: 1.00
+2025-08-28 11:42:32,387 - INFO - Data split: 712 training samples, 238 testing samples.
+2025-08-28 11:45:40,149 - INFO - Data split: 713 training samples, 238 testing samples.
+2025-08-28 11:45:40,728 - INFO - Data split: 713 training samples, 238 testing samples.
+2025-08-28 11:45:40,728 - INFO - Fitting data scaler on training data and creating environment...
+2025-08-28 11:45:40,730 - INFO - Scaler fitted and saved to /Users/matteocesari/Desktop/Apex Agent/scaler.joblib
+2025-08-28 11:45:41,368 - INFO - Starting training for 30 episodes...
+2025-08-28 11:45:42,630 - INFO - Episode 1/30 | Reward: 0.00 | Epsilon: 1.00
+2025-08-28 11:45:46,358 - INFO - Episode 2/30 | Reward: 0.00 | Epsilon: 1.00
+2025-08-28 11:46:12,569 - INFO - Episode 3/30 | Reward: 0.00 | Epsilon: 1.00
+2025-08-28 11:46:41,178 - INFO - Episode 4/30 | Reward: 0.00 | Epsilon: 1.00
+2025-08-28 11:46:53,081 - INFO - Episode 5/30 | Reward: 0.00 | Epsilon: 1.00
+2025-08-28 11:46:56,685 - INFO - Episode 6/30 | Reward: 0.00 | Epsilon: 0.99
+2025-08-28 11:47:33,014 - INFO - Episode 7/30 | Reward: 0.00 | Epsilon: 0.99
+2025-08-28 11:47:52,224 - INFO - Episode 8/30 | Reward: 0.00 | Epsilon: 0.99
+2025-08-28 11:48:08,983 - INFO - Episode 9/30 | Reward: 0.00 | Epsilon: 0.99
+2025-08-28 11:48:10,671 - INFO - Episode 10/30 | Reward: 0.00 | Epsilon: 0.99
+2025-08-28 11:48:13,470 - INFO - Episode 11/30 | Reward: 0.00 | Epsilon: 0.99
+2025-08-28 11:48:28,442 - INFO - Episode 12/30 | Reward: 0.00 | Epsilon: 0.99
+2025-08-28 11:50:25,491 - INFO - Data split: 738 training samples, 247 testing samples.
+2025-08-28 11:50:25,492 - INFO - Fitting data scaler on training data and creating environment...
+2025-08-28 11:50:25,494 - INFO - Scaler fitted and saved to /Users/matteocesari/Desktop/Apex Agent/scaler.joblib
+2025-08-28 11:50:26,134 - INFO - Starting training for 50 episodes...
+2025-08-28 11:52:39,713 - INFO - Data split: 738 training samples, 247 testing samples.
+2025-08-28 11:52:39,713 - INFO - Fitting data scaler on training data and creating environment...
+2025-08-28 11:52:39,714 - INFO - Scaler fitted and saved to /Users/matteocesari/Desktop/Apex Agent/scaler.joblib
+2025-08-28 11:54:25,202 - INFO - Data split: 738 training samples, 247 testing samples.
+2025-08-28 11:54:25,202 - INFO - Fitting data scaler on training data and creating environment...
+2025-08-28 11:54:25,203 - INFO - Scaler fitted and saved to /Users/matteocesari/Desktop/Apex Agent/scaler.joblib
+2025-08-28 11:54:25,822 - INFO - Starting training for 50 episodes...
+2025-08-28 11:54:40,762 - INFO - Episode 1/50 | Reward: 67.83 | Epsilon: 0.99
+2025-08-28 11:55:25,403 - INFO - Episode 2/50 | Reward: 1942.03 | Epsilon: 0.99
+2025-08-28 11:55:32,130 - INFO - Episode 3/50 | Reward: 281.09 | Epsilon: 0.99
+2025-08-28 11:55:33,124 - INFO - Episode 4/50 | Reward: -842.60 | Epsilon: 0.98
+2025-08-28 11:55:34,479 - INFO - Episode 5/50 | Reward: -34.37 | Epsilon: 0.98
+2025-08-28 11:55:35,597 - INFO - Episode 6/50 | Reward: -392.92 | Epsilon: 0.97
+2025-08-28 11:55:42,001 - INFO - Episode 7/50 | Reward: -571.94 | Epsilon: 0.97
+2025-08-28 11:56:27,571 - INFO - Episode 8/50 | Reward: 825.41 | Epsilon: 0.96
+2025-08-28 11:56:50,914 - INFO - Episode 9/50 | Reward: -1.96 | Epsilon: 0.96
+2025-08-28 11:57:25,323 - INFO - Episode 10/50 | Reward: 1926.51 | Epsilon: 0.95
+2025-08-28 11:58:16,586 - INFO - Episode 11/50 | Reward: 2826.39 | Epsilon: 0.95
+2025-08-28 11:59:08,293 - INFO - Episode 12/50 | Reward: 4266.19 | Epsilon: 0.94
+2025-08-28 11:59:09,188 - INFO - Episode 13/50 | Reward: -502.12 | Epsilon: 0.94
+2025-08-28 11:59:48,391 - INFO - Episode 14/50 | Reward: 775.84 | Epsilon: 0.93
+2025-08-28 12:00:37,126 - INFO - Episode 15/50 | Reward: 2494.73 | Epsilon: 0.93
+2025-08-28 12:00:38,106 - INFO - Episode 16/50 | Reward: -446.00 | Epsilon: 0.92
+2025-08-28 12:01:26,843 - INFO - Episode 17/50 | Reward: 2992.02 | Epsilon: 0.92
+2025-08-28 12:02:15,314 - INFO - Episode 18/50 | Reward: 3809.87 | Epsilon: 0.91
+2025-08-28 12:02:47,985 - INFO - Episode 19/50 | Reward: -995.86 | Epsilon: 0.91
+2025-08-28 12:03:36,709 - INFO - Episode 20/50 | Reward: 3014.66 | Epsilon: 0.90
+2025-08-28 12:04:08,040 - INFO - Episode 21/50 | Reward: 667.43 | Epsilon: 0.90
+2025-08-28 12:04:56,644 - INFO - Episode 22/50 | Reward: 2062.58 | Epsilon: 0.90
+2025-08-28 12:05:27,038 - INFO - Episode 23/50 | Reward: 1496.80 | Epsilon: 0.89
+2025-08-28 12:05:35,302 - INFO - Episode 24/50 | Reward: 274.90 | Epsilon: 0.89
+2025-08-28 12:05:36,252 - INFO - Episode 25/50 | Reward: -571.35 | Epsilon: 0.88
+2025-08-28 12:05:37,189 - INFO - Episode 26/50 | Reward: -599.35 | Epsilon: 0.88
+2025-08-28 12:06:21,298 - INFO - Episode 27/50 | Reward: 178.56 | Epsilon: 0.87
+2025-08-28 12:06:48,143 - INFO - Episode 28/50 | Reward: 1194.69 | Epsilon: 0.87
+2025-08-28 12:07:14,070 - INFO - Episode 29/50 | Reward: 8.24 | Epsilon: 0.86
+2025-08-28 12:08:06,678 - INFO - Episode 30/50 | Reward: 3792.47 | Epsilon: 0.86
+2025-08-28 12:08:55,534 - INFO - Episode 31/50 | Reward: 1677.51 | Epsilon: 0.86
+2025-08-28 12:09:02,674 - INFO - Episode 32/50 | Reward: -603.10 | Epsilon: 0.85
+2025-08-28 12:09:50,017 - INFO - Episode 33/50 | Reward: 4654.14 | Epsilon: 0.85
+2025-08-28 12:10:21,067 - INFO - Episode 34/50 | Reward: 1252.59 | Epsilon: 0.84
+2025-08-28 12:10:29,313 - INFO - Episode 35/50 | Reward: 155.65 | Epsilon: 0.84
+2025-08-28 12:10:31,402 - INFO - Episode 36/50 | Reward: -279.44 | Epsilon: 0.83
+2025-08-28 12:11:19,032 - INFO - Episode 37/50 | Reward: 2815.94 | Epsilon: 0.83
+2025-08-28 12:11:20,239 - INFO - Episode 38/50 | Reward: -883.16 | Epsilon: 0.83
+2025-08-28 12:12:01,650 - INFO - Episode 39/50 | Reward: 202.67 | Epsilon: 0.82
+2025-08-28 12:12:06,074 - INFO - Episode 40/50 | Reward: 34.25 | Epsilon: 0.82
+2025-08-28 12:12:53,256 - INFO - Episode 41/50 | Reward: 3354.42 | Epsilon: 0.81
+2025-08-28 12:13:24,786 - INFO - Episode 42/50 | Reward: 2273.43 | Epsilon: 0.81
+2025-08-28 12:13:32,447 - INFO - Episode 43/50 | Reward: -407.37 | Epsilon: 0.81
+2025-08-28 12:14:19,581 - INFO - Episode 44/50 | Reward: 3186.55 | Epsilon: 0.80
+2025-08-28 12:14:20,534 - INFO - Episode 45/50 | Reward: -519.40 | Epsilon: 0.80
+2025-08-28 12:14:21,399 - INFO - Episode 46/50 | Reward: -502.12 | Epsilon: 0.79
+2025-08-28 12:15:09,151 - INFO - Episode 47/50 | Reward: 4290.55 | Epsilon: 0.79
+2025-08-28 12:15:56,440 - INFO - Episode 48/50 | Reward: 2675.25 | Epsilon: 0.79
+2025-08-28 12:16:32,716 - INFO - Episode 49/50 | Reward: 529.61 | Epsilon: 0.78
+2025-08-28 12:17:20,308 - INFO - Episode 50/50 | Reward: 1034.06 | Epsilon: 0.78
+2025-08-28 12:17:20,313 - INFO - Training complete! Model saved to /Users/matteocesari/Desktop/Apex Agent/agent_model.pth
+2025-08-28 12:17:41,493 - INFO - Data split: 1488 training samples, 496 testing samples.
+2025-08-28 12:17:41,494 - INFO - Initializing Agent for Backtest on Unseen Data...
+2025-08-28 12:17:41,513 - INFO - Agent model and scaler loaded successfully.
+2025-08-28 12:17:41,516 - INFO - Starting backtest...
+2025-08-28 12:17:41,524 - INFO - BACKTEST TRADE LOGGED: PnL=$-2150.37, New Balance=$7849.63
+2025-08-28 12:17:41,526 - INFO - BACKTEST TRADE LOGGED: PnL=$-1824.76, New Balance=$6024.87
+2025-08-28 12:17:41,538 - INFO - BACKTEST TRADE LOGGED: PnL=$-2122.77, New Balance=$3902.10
+2025-08-28 12:17:41,554 - INFO - BACKTEST TRADE LOGGED: PnL=$-2007.83, New Balance=$1894.27
+2025-08-28 12:17:41,559 - INFO - BACKTEST TRADE LOGGED: PnL=$-2614.47, New Balance=$-720.20
+2025-08-28 12:17:41,560 - INFO - Backtest complete. Results have been saved to the database.
+2025-08-28 12:24:09,821 - INFO - Data split: 677 training samples, 226 testing samples.
+2025-08-28 12:24:09,822 - INFO - Fitting data scaler on training data and creating environment...
+2025-08-28 12:24:09,824 - INFO - Scaler fitted and saved to /Users/matteocesari/Desktop/Apex Agent/scaler.joblib
+2025-08-28 12:25:49,330 - INFO - Data split: 1426 training samples, 476 testing samples.
+2025-08-28 12:25:49,331 - INFO - Fitting data scaler on training data and creating environment...
+2025-08-28 12:25:49,333 - INFO - Scaler for 10 features fitted and saved.
+2025-08-28 12:25:50,129 - INFO - Starting training for 50 episodes...
+2025-08-28 12:26:04,282 - INFO - Episode 1/50 | Reward: -364.39 | Epsilon: 0.99
+2025-08-28 12:26:06,858 - INFO - Episode 2/50 | Reward: -1117.25 | Epsilon: 0.99
+2025-08-28 12:26:46,459 - INFO - Episode 3/50 | Reward: 254.44 | Epsilon: 0.99
+2025-08-28 12:28:01,530 - INFO - Episode 4/50 | Reward: 1133.23 | Epsilon: 0.98
+2025-08-28 12:28:04,055 - INFO - Episode 5/50 | Reward: -637.24 | Epsilon: 0.98
+2025-08-28 12:28:50,982 - INFO - Episode 6/50 | Reward: 1299.28 | Epsilon: 0.97
+2025-08-28 12:28:53,528 - INFO - Episode 7/50 | Reward: -326.06 | Epsilon: 0.97
+2025-08-28 12:29:58,364 - INFO - Episode 8/50 | Reward: -32.22 | Epsilon: 0.96
+2025-08-28 12:29:59,876 - INFO - Episode 9/50 | Reward: -419.49 | Epsilon: 0.96
+2025-08-28 12:30:18,588 - INFO - Episode 10/50 | Reward: -609.14 | Epsilon: 0.95
+2025-08-28 12:32:43,048 - INFO - Episode 11/50 | Reward: 1441.77 | Epsilon: 0.95
+2025-08-28 12:33:46,848 - INFO - Episode 12/50 | Reward: 2101.69 | Epsilon: 0.94
+2025-08-28 12:34:03,655 - INFO - Episode 13/50 | Reward: -312.90 | Epsilon: 0.94
+2025-08-28 12:34:05,428 - INFO - Episode 14/50 | Reward: -1.36 | Epsilon: 0.93
+2025-08-28 12:35:02,558 - INFO - Episode 15/50 | Reward: 1242.94 | Epsilon: 0.93
+2025-08-28 12:35:53,775 - INFO - Episode 16/50 | Reward: 2534.95 | Epsilon: 0.92
+2025-08-28 12:36:14,168 - INFO - Episode 17/50 | Reward: -849.60 | Epsilon: 0.92
+2025-08-28 12:38:33,681 - INFO - Episode 18/50 | Reward: 5504.38 | Epsilon: 0.91
+2025-08-28 12:38:53,505 - INFO - Episode 19/50 | Reward: 165.20 | Epsilon: 0.91
+2025-08-28 12:40:02,190 - INFO - Episode 20/50 | Reward: 2412.62 | Epsilon: 0.90
+2025-08-28 12:40:30,218 - INFO - Episode 21/50 | Reward: -374.02 | Epsilon: 0.90
+2025-08-28 12:40:50,724 - INFO - Episode 22/50 | Reward: -379.96 | Epsilon: 0.90
+2025-08-28 12:40:51,852 - INFO - Episode 23/50 | Reward: -637.24 | Epsilon: 0.89
+2025-08-28 12:40:54,280 - INFO - Episode 24/50 | Reward: -516.91 | Epsilon: 0.89
+2025-08-28 12:43:08,405 - INFO - Episode 25/50 | Reward: 7624.10 | Epsilon: 0.88
+2025-08-28 12:45:23,842 - INFO - Episode 26/50 | Reward: 5005.15 | Epsilon: 0.88
+2025-08-28 12:47:45,207 - INFO - Episode 27/50 | Reward: 9356.10 | Epsilon: 0.87
+2025-08-28 12:50:13,777 - INFO - Episode 28/50 | Reward: 7246.66 | Epsilon: 0.87
+2025-08-28 12:50:21,861 - INFO - Episode 29/50 | Reward: -433.45 | Epsilon: 0.86
+2025-08-28 12:52:52,214 - INFO - Episode 30/50 | Reward: 6545.35 | Epsilon: 0.86
+2025-08-28 12:55:35,295 - INFO - Episode 31/50 | Reward: 8284.03 | Epsilon: 0.86
+2025-08-28 12:56:21,053 - INFO - Episode 32/50 | Reward: 958.73 | Epsilon: 0.85
+2025-08-28 12:58:21,020 - INFO - Using device: cpu
+2025-08-28 12:58:21,023 - INFO - Scaler for 8 features fitted and saved.
+2025-08-28 12:59:33,439 - INFO - Data split: 2175 training samples, 726 testing samples.
+2025-08-28 12:59:33,442 - INFO - Using device: cpu
+2025-08-28 12:59:33,448 - INFO - Scaler for 10 features fitted and saved.
+2025-08-28 12:59:34,283 - INFO - Starting training for 200 episodes...
+2025-08-28 13:00:31,670 - INFO - Ep 1/200 | Reward: -724.55 | Avg Reward (10ep): -724.55 | Epsilon: 0.99
+2025-08-28 13:07:25,744 - INFO - Ep 2/200 | Reward: -5.40 | Avg Reward (10ep): -364.97 | Epsilon: 0.99
+2025-08-28 13:07:35,505 - INFO - Ep 3/200 | Reward: -214.59 | Avg Reward (10ep): -314.85 | Epsilon: 0.99
+2025-08-28 13:14:25,953 - INFO - Ep 4/200 | Reward: 2029.44 | Avg Reward (10ep): 271.22 | Epsilon: 0.98
+2025-08-28 13:20:57,679 - INFO - Ep 5/200 | Reward: 1392.96 | Avg Reward (10ep): 495.57 | Epsilon: 0.98
+2025-08-28 13:24:32,992 - INFO - Ep 6/200 | Reward: 55.85 | Avg Reward (10ep): 422.28 | Epsilon: 0.97
+2025-08-28 13:30:51,585 - INFO - Ep 7/200 | Reward: 11.89 | Avg Reward (10ep): 363.66 | Epsilon: 0.97
+2025-08-28 13:36:53,412 - INFO - Ep 8/200 | Reward: 1528.69 | Avg Reward (10ep): 509.29 | Epsilon: 0.96
+2025-08-28 13:43:05,567 - INFO - Ep 9/200 | Reward: 2376.22 | Avg Reward (10ep): 716.72 | Epsilon: 0.96
+2025-08-28 13:45:13,242 - INFO - Ep 10/200 | Reward: 425.83 | Avg Reward (10ep): 687.63 | Epsilon: 0.95
+2025-08-28 13:50:27,150 - INFO - Ep 11/200 | Reward: 596.08 | Avg Reward (10ep): 819.70 | Epsilon: 0.95
+2025-08-28 13:52:36,395 - INFO - Ep 12/200 | Reward: -158.32 | Avg Reward (10ep): 804.40 | Epsilon: 0.94
+2025-08-28 13:57:47,539 - INFO - Ep 13/200 | Reward: 562.03 | Avg Reward (10ep): 882.07 | Epsilon: 0.94
+2025-08-28 14:01:45,757 - INFO - Ep 14/200 | Reward: 99.28 | Avg Reward (10ep): 689.05 | Epsilon: 0.93
+2025-08-28 14:02:06,370 - INFO - Ep 15/200 | Reward: -145.34 | Avg Reward (10ep): 535.22 | Epsilon: 0.93
+2025-08-28 14:08:10,508 - INFO - Ep 16/200 | Reward: 464.25 | Avg Reward (10ep): 576.06 | Epsilon: 0.92
+2025-08-28 14:14:16,849 - INFO - Ep 17/200 | Reward: 1448.30 | Avg Reward (10ep): 719.70 | Epsilon: 0.92
+2025-08-28 14:20:20,005 - INFO - Ep 18/200 | Reward: 856.04 | Avg Reward (10ep): 652.44 | Epsilon: 0.91
+2025-08-28 14:24:41,123 - INFO - Ep 19/200 | Reward: 473.60 | Avg Reward (10ep): 462.17 | Epsilon: 0.91
+2025-08-28 14:28:05,847 - INFO - Ep 20/200 | Reward: 872.20 | Avg Reward (10ep): 506.81 | Epsilon: 0.90
+2025-08-28 14:34:37,325 - INFO - Ep 21/200 | Reward: 1528.42 | Avg Reward (10ep): 600.05 | Epsilon: 0.90
+2025-08-28 14:38:38,560 - INFO - Ep 22/200 | Reward: 547.11 | Avg Reward (10ep): 670.59 | Epsilon: 0.90
+2025-08-28 14:39:54,367 - INFO - Ep 23/200 | Reward: 99.02 | Avg Reward (10ep): 624.29 | Epsilon: 0.89
+2025-08-28 14:46:29,214 - INFO - Ep 24/200 | Reward: 1598.22 | Avg Reward (10ep): 774.18 | Epsilon: 0.89
+2025-08-28 14:53:19,654 - INFO - Ep 25/200 | Reward: 1327.04 | Avg Reward (10ep): 921.42 | Epsilon: 0.88
+2025-08-28 14:59:56,989 - INFO - Ep 26/200 | Reward: 2195.64 | Avg Reward (10ep): 1094.56 | Epsilon: 0.88
+2025-08-28 15:07:19,311 - INFO - Ep 27/200 | Reward: 1874.59 | Avg Reward (10ep): 1137.19 | Epsilon: 0.87
+2025-08-28 15:09:33,848 - INFO - Ep 28/200 | Reward: -186.47 | Avg Reward (10ep): 1032.94 | Epsilon: 0.87
+2025-08-28 15:09:43,205 - INFO - Ep 29/200 | Reward: -427.61 | Avg Reward (10ep): 942.82 | Epsilon: 0.86
+2025-08-28 15:16:45,903 - INFO - Ep 30/200 | Reward: 2591.64 | Avg Reward (10ep): 1114.76 | Epsilon: 0.86
+2025-08-28 15:22:18,103 - INFO - Ep 31/200 | Reward: 597.82 | Avg Reward (10ep): 1021.70 | Epsilon: 0.86
+2025-08-28 15:29:37,295 - INFO - Ep 32/200 | Reward: 2581.10 | Avg Reward (10ep): 1225.10 | Epsilon: 0.85
+2025-08-28 15:33:01,861 - INFO - Ep 33/200 | Reward: 844.86 | Avg Reward (10ep): 1299.68 | Epsilon: 0.85
